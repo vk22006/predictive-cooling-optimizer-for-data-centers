@@ -1,6 +1,5 @@
 # Predictive Cooling Optimizer for Data Centers: Temperature-Aware Chiller Scheduling to Cut Energy Use
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Languages](https://img.shields.io/github/languages/top/vk22006/predictive-cooling-optimizer-for-data-centers)](https://github.com/vk22006/predictive-cooling-optimizer-for-data-centers)
 
 The project addresses energy inefficiency in data center cooling systems by developing a temperature-aware predictive model that optimizes chiller scheduling to reduce energy consumption while maintaining thermal safety. Traditional reactive cooling systems respond to temperature changes after they occur, leading to energy waste and suboptimal chiller operation.
 
@@ -61,4 +60,8 @@ streamlit run 1_Home.py
 - Rolling Average (for feature engineering)
 
 The tool successfully demonstrates feasibility for software-based predictive cooling optimization, with models ready for deployment in interactive web applications using Streamlit for user-freindly interface and stakeholder presentation.
+
+## License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
