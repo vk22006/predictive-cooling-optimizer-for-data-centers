@@ -1,5 +1,4 @@
 # SPDX-License-Identifier: MIT
-# Copyright (c) 2025 Kishore V
 
 import streamlit as st
 import pandas as pd
@@ -297,4 +296,5 @@ if st.session_state.run_demo:
     st.success("Live demo complete.")
 else:
     st.info("Press 'Start Live Demo' to see the model predictions in action.")
+
 
