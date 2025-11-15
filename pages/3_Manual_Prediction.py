@@ -1,4 +1,5 @@
-# pages/3_Manual_Prediction.py
+# SPDX-License-Identifier: MIT
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -437,7 +438,7 @@ if st.button("Run Prediction & Optimization"):
         c2.metric("🌡️ Temperature Forecast (1hr)", f"{pred_temp:.2f} °C")
 
         st.subheader("3. Optimization Results")
-        if pred_temp > 34.0:
+        if pred_temp > 32.5:
             st.warning("⚠️ Predicted temp is high. Recommend stronger cooling.")
             optimized_energy = pred_energy * 1.05
             suggestion = "Increase cooling"
@@ -453,3 +454,4 @@ if st.button("Run Prediction & Optimization"):
         st.metric("💰 Cost Reduction Estimate (mock)", f"${cost_savings:.2f}")
 
         st.markdown(f"**Suggested action:** {suggestion}")
+
