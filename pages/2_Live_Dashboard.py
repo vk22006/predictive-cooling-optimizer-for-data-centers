@@ -1,4 +1,6 @@
-# pages/2_Live_Dashboard.py
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2025 Kishore V
+
 import streamlit as st
 import pandas as pd
 import pickle
@@ -160,8 +162,6 @@ if energy_feature_list is not None:
 # Build X_test for the energy model only using its own feature list
 X_test_energy = df[energy_feature_list].copy() if energy_feature_list is not None else df.copy()
 
-# for temp model, we will create X_temp per-step matching temp_feature_list
-
 # ---------------------------
 # UI
 # ---------------------------
@@ -172,10 +172,10 @@ if "run_demo" not in st.session_state:
     st.session_state.run_demo = False
 
 # Start/stop buttons: no experimental_rerun usage
-if st.button("🚀 Start Live Demo") and not st.session_state.run_demo:
+if st.button("▶ Start Live Demo") and not st.session_state.run_demo:
     st.session_state.run_demo = True
 
-if st.button("⏹️ Stop Demo") and st.session_state.run_demo:
+if st.button("■ Stop Demo") and st.session_state.run_demo:
     st.session_state.run_demo = False
 
 # KPI + charts placeholders
@@ -297,3 +297,4 @@ if st.session_state.run_demo:
     st.success("Live demo complete.")
 else:
     st.info("Press 'Start Live Demo' to see the model predictions in action.")
+
