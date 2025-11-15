@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+
 import streamlit as st
 import pickle
 import base64
@@ -83,4 +85,5 @@ Five testing methodologies were used:
 * **Functional Testing**: Ensured accuracy and latency requirements were met.
 * **White Box Testing**: Verified hyperparameter tuning and model logic.
 * **Black Box Testing**: Checked boundary conditions and system consistency.
+
 """)
