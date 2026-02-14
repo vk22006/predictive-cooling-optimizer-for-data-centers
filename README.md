@@ -1,5 +1,9 @@
 # Predictive Cooling Optimizer for Data Centers: Temperature-Aware Chiller Scheduling to Cut Energy Use
+![GitHub top language](https://img.shields.io/github/languages/top/vk22006/predictive-cooling-optimizer-for-data-centers)
+![GitHub language count](https://img.shields.io/github/languages/count/vk22006/predictive-cooling-optimizer-for-data-centers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![GitHub forks](https://img.shields.io/github/forks/vk22006/predictive-cooling-optimizer-for-data-centers)
+
 
 The project addresses energy inefficiency in data center cooling systems by developing a temperature-aware predictive model that optimizes chiller scheduling to reduce energy consumption while maintaining thermal safety. Traditional reactive cooling systems respond to temperature changes after they occur, leading to energy waste and suboptimal chiller operation.
 
