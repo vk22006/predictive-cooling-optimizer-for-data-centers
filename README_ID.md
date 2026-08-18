@@ -1,5 +1,5 @@
 # Pengoptimalan Pendinginan Prediktif untuk Pusat Data: Penjadwalan Chiller Berbasis Suhu untuk Mengurangi Konsumsi Energi
-[English](README.md) | [தமிழ்](README_TA.md) | 中文 | [हिन्दी](README_HI.md) | [Bahasa Indonesia](README_ID.md)
+[English](README.md) | [தமிழ்](README_TA.md) | [中文](README_ZH.md) | [हिन्दी](README_HI.md) | Bahasa Indonesia
 
 ![GitHub top language](https://img.shields.io/github/languages/top/vk22006/predictive-cooling-optimizer-for-data-centers)
 ![GitHub language count](https://img.shields.io/github/languages/count/vk22006/predictive-cooling-optimizer-for-data-centers)
