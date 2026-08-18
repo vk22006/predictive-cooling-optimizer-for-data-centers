@@ -1,4 +1,7 @@
 # Predictive Cooling Optimizer for Data Centers: Temperature-Aware Chiller Scheduling to Cut Energy Use
+
+English | [தமிழ்](README_TA.md) | [中文](README_ZH.md) | [हिन्दी](README_HI.md) | [Bahasa Indonesia](README_ID.md)
+
 ![GitHub top language](https://img.shields.io/github/languages/top/vk22006/predictive-cooling-optimizer-for-data-centers)
 ![GitHub language count](https://img.shields.io/github/languages/count/vk22006/predictive-cooling-optimizer-for-data-centers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
