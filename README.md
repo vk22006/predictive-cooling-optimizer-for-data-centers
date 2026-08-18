@@ -15,7 +15,11 @@ The project addresses energy inefficiency in data center cooling systems by deve
 ## Project Methodology
   The methodology began with comprehensive data preprocessing of 13,615 HVAC samples, including outlier detection using IQR, normalization via MinMaxScaler, and chronological 80-20 train-test splitting to preserve temporal integrity. Feature engineering created 46 enhanced features encompassing lag features (16), rolling averages (12), cyclical temporal encodings (6), and interaction features (4), capturing complex system dynamics.
 
-  Two XGBoost regression models formed the core prediction engine: an Energy Prediction Model achieving R² = 0.9891 with MAE of 1.222 kWh, and a Temperature Forecasting Model achieving R² = 0.6853 with 89.24% predictions within ±1°C tolerance. Both models demonstrated efficient training times (2.12 seconds for energy, 1.87 seconds for temperature) suitable for real-time deployment.
+  Two XGBoost regression models formed the core prediction engine: 
+- An Energy Prediction Model achieving R² = 0.9891 with MAE of 1.222 kWh and,
+- Temperature Forecasting Model achieving R² = 0.6853 with 89.24% predictions within ±1°C tolerance.
+
+Both models demonstrated efficient training times (2.12 seconds for energy, 1.87 seconds for temperature) suitable for real-time deployment.
 
   A PredictiveCoolingOptimizer class integrated both models, enabling system-wide optimization through constraint-based temperature management and energy minimization strategies.
 
