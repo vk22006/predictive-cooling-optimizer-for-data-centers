@@ -48,7 +48,7 @@
 1. தேவையான libraries-ஐ நிறுவவும்:
 
 ```bash
-pip install xgboost streamlit
+pip install -r requirements.txt
 ```
 
 2. Command Prompt அல்லது PowerShell மூலம் திட்டக் கோப்புறைக்குச் செல்லவும்:

@@ -47,7 +47,7 @@
 1. 安装所需的库：
 
 ```bash
-pip install xgboost streamlit
+pip install -r requirements.txt
 ```
 
 2. 在命令提示符（Command Prompt）或 PowerShell 中进入项目目录：

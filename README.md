@@ -41,7 +41,7 @@ There are a total of 11 tests conducted under five categories. Here's the detail
 The execution of the program is as simple as it can get. Here's a step-by-step procedure on how to do so.
 1. Install necessary libraries:
 ```bash
-pip install xgboost streamlit
+pip install -r requirements.txt
 ```
 2. Navigate to the project folder in Command Prompt/Powershell:
 ```bash
