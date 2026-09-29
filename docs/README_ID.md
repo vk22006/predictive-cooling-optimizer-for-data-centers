@@ -47,7 +47,7 @@ Proses menjalankan program cukup sederhana. Ikuti langkah-langkah berikut.
 1. Instal library yang diperlukan:
 
 ```bash
-pip install xgboost streamlit
+pip install -r requirements.txt
 ```
 
 2. Buka Command Prompt atau PowerShell dan masuk ke folder proyek:

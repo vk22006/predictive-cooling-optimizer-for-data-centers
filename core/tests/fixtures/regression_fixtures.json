@@ -1,0 +1,57 @@
+{
+  "dataset_fixtures": [
+    {
+      "sample_index": 0,
+      "chilled_water_rate": 94.0,
+      "building_load": 505.9,
+      "cooling_water_temp": 32.4,
+      "outside_temp": 82.0,
+      "expected_energy_kwh": 128.8334,
+      "expected_temp_c": 32.1529,
+      "expected_opt_baseline_kwh": 128.8334,
+      "expected_opt_optimized_kwh": 128.6019,
+      "expected_opt_savings_kwh": 0.2315,
+      "expected_opt_adjustment": -5.0
+    },
+    {
+      "sample_index": 25,
+      "chilled_water_rate": 104.3,
+      "building_load": 609.5,
+      "cooling_water_temp": 31.3,
+      "outside_temp": 82.0,
+      "expected_energy_kwh": 152.5291,
+      "expected_temp_c": 32.2808,
+      "expected_opt_baseline_kwh": 152.5291,
+      "expected_opt_optimized_kwh": 152.3462,
+      "expected_opt_savings_kwh": 0.1829,
+      "expected_opt_adjustment": -5.0
+    },
+    {
+      "sample_index": 50,
+      "chilled_water_rate": 89.6,
+      "building_load": 466.1,
+      "cooling_water_temp": 31.1,
+      "outside_temp": 82.0,
+      "expected_energy_kwh": 104.6956,
+      "expected_temp_c": 31.0139,
+      "expected_opt_baseline_kwh": 104.6956,
+      "expected_opt_optimized_kwh": 104.629,
+      "expected_opt_savings_kwh": 0.0666,
+      "expected_opt_adjustment": 1.0
+    }
+  ],
+  "synthetic_reading_fixture": {
+    "timestamp": "2026-06-01T14:00:00",
+    "chilled_water_rate": 95.0,
+    "cooling_water_temp": 32.0,
+    "building_load": 510.0,
+    "outside_temp": 86.0,
+    "dew_point": 75.0,
+    "humidity": 78.0,
+    "wind_speed": 7.0,
+    "pressure": 29.82,
+    "chiller_energy": 128.0,
+    "expected_energy_kwh": 123.7456,
+    "expected_temp_c": 31.6009
+  }
+}

@@ -48,7 +48,7 @@ Feature Engineering के माध्यम से कुल 46 उन्न�
 1. आवश्यक libraries इंस्टॉल करें:
 
 ```bash
-pip install xgboost streamlit
+pip install -r requirements.txt
 ```
 
 2. Command Prompt या PowerShell में परियोजना फ़ोल्डर में जाएँ:
