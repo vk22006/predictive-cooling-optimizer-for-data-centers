@@ -1,6 +1,6 @@
 # Predictive Cooling Optimizer for Data Centers: Temperature-Aware Chiller Scheduling to Cut Energy Use
 
-English | [தமிழ்](README_TA.md) | [中文](README_ZH.md) | [हिन्दी](README_HI.md) | [Bahasa Indonesia](README_ID.md)
+English | [தமிழ்](docs/README_TA.md) | [中文](docs/README_ZH.md) | [हिन्दी](docs/README_HI.md) | [Bahasa Indonesia](docs/README_ID.md)
 
 ![GitHub top language](https://img.shields.io/github/languages/top/vk22006/predictive-cooling-optimizer-for-data-centers)
 ![GitHub language count](https://img.shields.io/github/languages/count/vk22006/predictive-cooling-optimizer-for-data-centers)
@@ -10,7 +10,7 @@ English | [தமிழ்](README_TA.md) | [中文](README_ZH.md) | [हिन�
 
 The project addresses energy inefficiency in data center cooling systems by developing a temperature-aware predictive model that optimizes chiller scheduling to reduce energy consumption while maintaining thermal safety. Traditional reactive cooling systems respond to temperature changes after they occur, leading to energy waste and suboptimal chiller operation.
 
-![home page](img/home_page.PNG 'home page')
+![home page](docs/img/home_page.PNG 'home page')
 
 ## Project Methodology
   The methodology began with comprehensive data preprocessing of 13,615 HVAC samples, including outlier detection using IQR, normalization via MinMaxScaler, and chronological 80-20 train-test splitting to preserve temporal integrity. Feature engineering created 46 enhanced features encompassing lag features (16), rolling averages (12), cyclical temporal encodings (6), and interaction features (4), capturing complex system dynamics.
