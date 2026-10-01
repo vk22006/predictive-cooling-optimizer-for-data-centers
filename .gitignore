@@ -2,6 +2,10 @@
 .pytest_cache/
 core/__pycache__/
 core/tests/__pycache__
+backend/__pycache__
+backend/api/__pycache__
+backend/schemas/__pycache__
+backend/tests/__pycache__
 
 # Misc
 .sf/
