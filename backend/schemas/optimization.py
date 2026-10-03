@@ -2,7 +2,7 @@
 """Schemas for cooling setpoint optimization."""
 
 from typing import Dict, List, Optional
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from backend.schemas.common import HistoricalDataPointSchema, SensorReadingSchema
 
@@ -36,6 +36,18 @@ class OptimizationRequest(BaseModel):
         le=50.0,
         description="Optional upper threshold for cooling water temperature in °C"
     )
+
+    model_config = ConfigDict(allow_inf_nan=False)
+
+    @model_validator(mode="after")
+    def validate_inputs_present(self) -> "OptimizationRequest":
+        has_reading = self.reading is not None
+        has_pre_engineered = self.pre_engineered_row is not None and len(self.pre_engineered_row) > 0
+        if not has_reading and not has_pre_engineered:
+            raise ValueError("Must provide either 'reading' (with 'history') or 'pre_engineered_row'.")
+        if has_reading and (self.history is None or len(self.history) < 12):
+            raise ValueError("When providing 'reading', 'history' with at least 12 rows is required.")
+        return self
 
 
 class OptimizationResponse(BaseModel):
