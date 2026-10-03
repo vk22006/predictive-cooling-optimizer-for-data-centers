@@ -14,6 +14,8 @@ class PredictionInputBase(BaseModel):
     history: Optional[List[HistoricalDataPointSchema]] = Field(None, description="Preceding time-series window (minimum 12 rows)")
     pre_engineered_row: Optional[Dict[str, float]] = Field(None, description="Pre-computed 46-feature row mapping")
 
+    model_config = ConfigDict(allow_inf_nan=False)
+
     @model_validator(mode="after")
     def validate_inputs_present(self) -> "PredictionInputBase":
         has_reading = self.reading is not None
@@ -42,6 +44,7 @@ class TemperaturePredictionRequest(PredictionInputBase):
     """Request schema for POST /api/predict/temperature."""
     predicted_energy_kwh: Optional[float] = Field(
         None,
+        ge=0.0,
         description="Optional pre-computed chiller energy in kWh. If omitted, the energy model is evaluated first in a canonical chained sequence."
     )
 
