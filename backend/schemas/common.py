@@ -37,6 +37,7 @@ class SensorReadingSchema(BaseModel):
     chiller_energy: Optional[float] = Field(None, ge=0.0, description="Current or recent chiller energy consumption in kWh")
 
     model_config = ConfigDict(
+        allow_inf_nan=False,
         json_schema_extra={
             "example": {
                 "timestamp": "2026-06-01T14:00:00",
@@ -58,13 +59,13 @@ class HistoricalDataPointSchema(BaseModel):
     """One historical time-series observation required for lag and rolling calculations."""
     Energy: float = Field(..., ge=0.0, description="Chiller energy consumption in kWh")
     Building_Load_RT: float = Field(..., ge=0.0, alias="Building Load (RT)", description="Building cooling load in RT")
-    Outside_Temperature_F: float = Field(..., alias="Outside Temperature (F)", description="Outside temperature in °F")
-    Cooling_Water_Temperature_C: float = Field(..., alias="Cooling Water Temperature (C)", description="Cooling water temperature in °C")
-    Chilled_Water_Rate_L_sec: Optional[float] = Field(None, alias="Chilled Water Rate (L/sec)", description="Chilled water rate in L/sec")
-    Dew_Point_F: Optional[float] = Field(None, alias="Dew Point (F)", description="Dew point in °F")
-    Humidity_Pct: Optional[float] = Field(None, alias="Humidity (%)", description="Humidity %")
-    Wind_Speed_mph: Optional[float] = Field(None, alias="Wind Speed (mph)", description="Wind speed in mph")
-    Pressure_in: Optional[float] = Field(None, alias="Pressure (in)", description="Atmospheric pressure in inches Hg")
-    Chiller_Energy_Consumption_kWh: Optional[float] = Field(None, alias="Chiller Energy Consumption (kWh)", description="Chiller energy in kWh")
+    Outside_Temperature_F: float = Field(..., ge=-40.0, le=150.0, alias="Outside Temperature (F)", description="Outside temperature in °F")
+    Cooling_Water_Temperature_C: float = Field(..., ge=0.0, le=80.0, alias="Cooling Water Temperature (C)", description="Cooling water temperature in °C")
+    Chilled_Water_Rate_L_sec: Optional[float] = Field(None, ge=0.0, le=500.0, alias="Chilled Water Rate (L/sec)", description="Chilled water rate in L/sec")
+    Dew_Point_F: Optional[float] = Field(None, ge=-40.0, le=150.0, alias="Dew Point (F)", description="Dew point in °F")
+    Humidity_Pct: Optional[float] = Field(None, ge=0.0, le=100.0, alias="Humidity (%)", description="Humidity %")
+    Wind_Speed_mph: Optional[float] = Field(None, ge=0.0, le=150.0, alias="Wind Speed (mph)", description="Wind speed in mph")
+    Pressure_in: Optional[float] = Field(None, ge=20.0, le=35.0, alias="Pressure (in)", description="Atmospheric pressure in inches Hg")
+    Chiller_Energy_Consumption_kWh: Optional[float] = Field(None, ge=0.0, alias="Chiller Energy Consumption (kWh)", description="Chiller energy in kWh")
 
-    model_config = ConfigDict(populate_by_name=True)
+    model_config = ConfigDict(populate_by_name=True, allow_inf_nan=False)
