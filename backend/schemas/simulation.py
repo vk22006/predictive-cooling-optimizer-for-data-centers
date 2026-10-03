@@ -13,6 +13,7 @@ class SimulationStepRequest(BaseModel):
     include_optimization: bool = Field(False, description="Whether to also run setpoint optimization on this frame")
 
     model_config = ConfigDict(
+        allow_inf_nan=False,
         json_schema_extra={
             "example": {
                 "current_index": 0,
