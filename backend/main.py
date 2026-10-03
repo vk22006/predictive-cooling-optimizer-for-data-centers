@@ -112,11 +112,11 @@ def create_app() -> FastAPI:
             msg = err.get("msg", "Invalid value")
             messages.append(f"{loc}: {msg}")
         return JSONResponse(
-            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            status_code=status.HTTP_422_UNPROCESSABLE_CONTENT,
             content=ErrorResponse(
                 detail="; ".join(messages),
                 error_type="ValidationError",
-                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                status_code=status.HTTP_422_UNPROCESSABLE_CONTENT,
             ).model_dump(),
         )
 
